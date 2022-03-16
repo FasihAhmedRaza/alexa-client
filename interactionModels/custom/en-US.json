@@ -1,0 +1,66 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fin bot",
+      "intents": [
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "GetRemoteDataIntent",
+          "slots": [],
+          "samples": [
+            "how many people are in space now",
+            "how many people are currently in space",
+            "how many humans are in space",
+            "how many humans are in space now",
+            "how many humans are currently in space",
+            "how many astronauts are in space",
+            "how many astronauts are in space now",
+            "how many astronauts are currently in space"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetRemoteDataIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.910464790292"
+          },
+          "slots": [],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.910464790292",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you wish to use Fin Bot for this request?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "3"
+}
